@@ -1,0 +1,262 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Main layout styles */
+.main-content {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 300px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #34495e;
+}
+
+/* App main area styles */
+.App {
+  flex: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  margin-right: 220px; /* Adjust margin to accommodate sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Add this line to center the book containers */
+}
+
+
+.App h1 {
+  margin-bottom: 20px;
+  color: #2980b9;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 2px 2px #ecf0f1;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 30px; /* Increase padding */
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Increase space below the form */
+  margin-top:50px;
+  width: 800px; /* Set form width */
+   /* Set a maximum width */
+  margin-left: auto; /* Center the form horizontally */
+  margin-right: auto; /* Center the form horizontally */
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #3498db;
+}
+
+/* Recommendations list styles */
+h2 {
+  margin-top: 20px;
+  color: #2980b9;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 800px; /* Set a maximum width for the book boxes */
+  margin-left: 20px; /* Add margin to create space between the sidebar and book containers */
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book img {
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.book-author {
+  font-size: 1em;
+  color: #7f8c8d;
+}
+
+.book-rating {
+  font-size: 0.9em;
+  color: #27ae60;
+}
+
+.book-rating-count {
+  font-size: 0.8em;
+  color: #95a5a6;
+}
+
+nav {
+  background-color: #2c3e50;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Styles for Buy and Rate buttons */
+.book-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.buy-button:hover {
+  background-color: #2ecc71;
+}
+
+/* Styles for Buy button */
+.buy-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.buy-button:hover {
+  background-color: #2ecc71;
+}
+
+/* Star rating section */
+.rate-section {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 25px;
+  color: #bdc3c7; /* Light gray for unfilled stars */
+  cursor: pointer;
+  margin-right: 5px;
+  transition: color 0.3s;
+}
+
+.star.filled {
+  color: #f1c40f; /* Yellow for filled stars */
+}
+
+.star:hover {
+  color: #f39c12;
+}
